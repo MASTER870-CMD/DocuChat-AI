@@ -19,7 +19,7 @@ export default async function handler(req, res) {
             return res.status(500).json({ error: 'API key is missing on the server' });
         }
 
-        // Make the request to Gemini
+        // Make the request to Gemini.
         const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
         
         const response = await fetch(apiUrl, {
